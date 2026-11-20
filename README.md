@@ -2,7 +2,17 @@
 
 Petit programme Python qui bouge la souris automatiquement (pour éviter la mise en veille / le statut « absent »).
 
-## Installation
+## Version Windows sans installation : `Souris.exe`
+
+Télécharge `Souris.exe` et double-clique dessus. Une fenêtre s'ouvre, et la souris bouge un tout petit peu toutes les 30 secondes. Le programme empêche aussi la mise en veille.
+- Pour arrêter, ferme la fenêtre.
+- Pour changer l'intervalle (en secondes), lance par exemple `Souris.exe 10` dans l'invite de commandes.
+- Si Windows affiche « Windows a protégé votre ordinateur », clique sur **Informations complémentaires → Exécuter quand même**.
+
+Le code source est dans `windows/souris.c`. Pour le recompiler :
+`x86_64-w64-mingw32-gcc -O2 -s -static -o Souris.exe windows/souris.c`
+
+## Version Python : installation
 
 1. Installer [Python 3](https://www.python.org/downloads/) (cocher « Add Python to PATH » sous Windows).
 2. Dans un terminal, dans ce dossier :
